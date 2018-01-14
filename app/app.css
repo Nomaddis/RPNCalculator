@@ -4,9 +4,7 @@ header {
   background-color: dimgrey;
   margin-bottom: 20px;
 }
-.app-loaded {
-  opacity: 1;
-}
+
 #send-sol-btn, #send-req-btn {
   margin: 10px 0;
 }
