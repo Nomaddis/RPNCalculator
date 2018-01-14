@@ -17,20 +17,20 @@
         </div>
     </div>
 </header>
-<div class="rpn-wrap" ng-controller="calculateRPN">
+<div class="rpn-wrap" ng-controller="calculateRPN"  data-ng-init="GET()" >
     <div class="container">
         <div class="page-cont">
             <div class="left-sidebar">
-                <span></span>
+                <span class="sidebar-text"></span>
             </div>
             <div class="main-cont">
-                <button type="button" id="send-req-btn" class="btn btn-primary" ng-click="GET()">send request</button>
+                <button type="button" id="send-req-btn" class="btn btn-primary" ng-click="GET()">Send new request</button>
                 <div id="get-response"><span>Your expression is:</span><span id="response-text">{{response.expressions}}</span></div>
-                <div id="post-response"><span>Your solution for server is:</span><span id="calculate-text">{{result.results}}</span></div>
-                <button type="button" id="send-sol-btn" class="btn btn-primary" ng-click="POST()">send solution</button>
+                <div id="post-response"><span>Your solution for server will be:</span><span id="calculate-text">{{result.results}}</span></div>
+                <button type="button" id="send-sol-btn" class="btn btn-primary" ng-click="POST()">Send solution</button>
 
                 <div class="alert alert-danger" role="alert" ng-hide="serverResult">
-                    Please try again. Solution is false
+                    Please try again. Solution is false. Click "Send new request" and then "Send solution"
                 </div>
                 <div class="alert alert-success" role="alert" ng-show="serverResult">
                     Solution is true
