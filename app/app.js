@@ -1,5 +1,5 @@
 'use strict';
-var module = angular.module('app', []);
+let module = angular.module('app', []);
 
 //Class for RPN test algorithm
 class MathSolver {
@@ -7,6 +7,7 @@ class MathSolver {
         this.postfix = postfix;
 
     }
+
     solvePostfix(postfix) {
         let resultStack = [];
         postfix = postfix.split(" ");
@@ -59,7 +60,6 @@ module.controller("calculateRPN", function ($scope, $http, $window) {
     $scope.result;
     $scope.serverResult;
     $scope.url = 'https://www.eliftech.com/school-task';
-    let responsed;
 
     //$scope.response;
     //GET function
@@ -96,8 +96,7 @@ module.controller("calculateRPN", function ($scope, $http, $window) {
                 $scope.serverResult = result.passed;
             })
             .error(function (result) {
-                console.log('Error in RPN post');
+                console.log('Error in RPN post', result);
             });
     };
-
 });
