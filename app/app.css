@@ -1,0 +1,32 @@
+/* app css stylesheet */
+header {
+
+  background-color: dimgrey;
+  margin-bottom: 20px;
+}
+#send-sol-btn, #send-req-btn {
+  margin: 10px 0;
+}
+.app-title {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 25px 0;
+  align-items: center;
+}
+.app-title h1 {
+  margin: 0;
+}
+.page-cont {
+  display: flex;
+  justify-content: space-between;
+}
+.left-sidebar {
+  margin-right: 20px;
+  width: 175px;
+  height: 600px;
+  background-color: #71647f;
+}
+.main-cont {
+  width: 100%;
+}

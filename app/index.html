@@ -1,0 +1,53 @@
+<!DOCTYPE html >
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AngularJS RPN App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="img/unnamed.png" type="image/x-icon">
+  <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body ng-app="app">
+<header>
+    <div class="container header-cont">
+        <div class="app-title">
+            <h1>RPN calculator</h1>
+        </div>
+    </div>
+</header>
+<div class="rpn-wrap" ng-controller="calculateRPN">
+    <div class="container">
+        <div class="page-cont">
+            <div class="left-sidebar">
+                <span></span>
+            </div>
+            <div class="main-cont">
+                <button type="button" id="send-req-btn" class="btn btn-primary" ng-click="GET()">send request</button>
+                <div id="get-response"><span>Your expression is:</span><span id="response-text">{{response.expressions}}</span></div>
+                <div id="post-response"><span>Your solution for server is:</span><span id="calculate-text">{{result.results}}</span></div>
+                <button type="button" id="send-sol-btn" class="btn btn-primary" ng-click="POST()">send solution</button>
+
+                <div class="alert alert-danger" role="alert" ng-hide="serverResult">
+                    Please try again. Solution is false
+                </div>
+                <div class="alert alert-success" role="alert" ng-show="serverResult">
+                    Solution is true
+                </div>
+
+            </div>
+            <div class="right-sidebar">
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
