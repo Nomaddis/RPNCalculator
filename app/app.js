@@ -54,21 +54,18 @@ String.prototype.isNumeric = function() {
 // Init RPN calculator
 let calc = new MathSolver();
 
-module.controller("calculateRPN", function ($scope, $http, $window) {
+module.controller("calculateRPN", function ($scope, $http) {
 
-
-    $scope.result;
     $scope.serverResult;
-    $scope.url = 'https://www.eliftech.com/school-task';
+    let url = $scope.url = 'https://www.eliftech.com/school-task';
 
     //$scope.response;
     //GET function
     $scope.GET = function () {
-        $http.get($scope.url)
+        $http.get(url)
             .then(function (response) {
                 console.log(response.data);
                 $scope.calculate(response.data);
-                //$scope.details = response.data;
             });
     };
     //$scope.resultArr;
@@ -89,7 +86,7 @@ module.controller("calculateRPN", function ($scope, $http, $window) {
 
     //POST results to server
     $scope.POST = function () {
-        $http.post($scope.url, $scope.result)
+        $http.post(url, $scope.result)
             .success(function(result)
             {
                 console.log(result);
