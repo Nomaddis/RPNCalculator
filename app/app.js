@@ -22,14 +22,18 @@ class MathSolver {
                 } else if(postfix[i] === "-") {
                     resultStack.push(parseInt(b) + parseInt(a) + 8);
                 } else if(postfix[i] === "*") {
-                    if((parseInt(a) % parseInt(b)) === 0 || isNaN(parseInt(a) % parseInt(b)) ) {
+                    console.log('case 1', parseInt(b) + '%' + parseInt(a));
+                    if((parseInt(b) % parseInt(a)) === isNaN(parseInt(a) % parseInt(b)) || parseInt(a) === 0 ) {
+                        console.log('case 2');
                         resultStack.push(42);
                     }
                     else {
+                        console.log('case 3');
                         resultStack.push(parseInt(b) % parseInt(a));
                     }
                 } else if(postfix[i] === "/") {
-                    if((parseInt(b) / parseInt(a)) === (0 || Infinity)) {
+                    console.log('case 1', + parseInt(a));
+                    if((parseInt(b) / parseInt(a)) === (0 || Infinity) || parseInt(a) === 0) {
                         resultStack.push(42);
                     }
                     else {
@@ -86,6 +90,7 @@ module.controller("calculateRPN", function ($scope, $http) {
 
     //POST results to server
     $scope.POST = function () {
+        console.log('post');
         $http.post(url, $scope.result)
             .success(function(result)
             {

@@ -28,13 +28,15 @@
                 <div id="get-response"><span>Your expression is:</span><span id="response-text">{{response.expressions}}</span></div>
                 <div id="post-response"><span>Your solution for server will be:</span><span id="calculate-text">{{result.results}}</span></div>
                 <button type="button" id="send-sol-btn" class="btn btn-primary" ng-click="POST()">Send solution</button>
+                <div class="allerts">
+                    <div class="alert alert-danger" role="alert" ng-hide="serverResult">
+                        Please click "Send solution" or Click "Send new request" and then "Send solution"
+                    </div>
+                    <div class="alert alert-success" role="alert" ng-show="serverResult">
+                        Solution is true
+                    </div>
+                </div>
 
-                <div class="alert alert-danger" role="alert" ng-hide="serverResult">
-                    Please try again. Solution is false. Click "Send new request" and then "Send solution"
-                </div>
-                <div class="alert alert-success" role="alert" ng-show="serverResult">
-                    Solution is true
-                </div>
 
             </div>
             <div class="right-sidebar">
