@@ -87,7 +87,6 @@ module.controller("calculateRPN", function ($scope, $http) {
     //POST results to server
     $scope.POST = function () {
         $scope.show = true;
-        console.log('post');
         $http.post(url, $scope.result)
             .success(function(result)
             {
