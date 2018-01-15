@@ -8,6 +8,11 @@ header {
 #send-sol-btn, #send-req-btn {
   margin: 10px 0;
 }
+#response-text, #calculate-text {
+  display: block;
+  height: 41px;
+}
+
 .app-title {
   height: 100%;
   display: flex;

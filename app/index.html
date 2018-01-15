@@ -25,8 +25,8 @@
             </div>
             <div class="main-cont">
                 <button type="button" id="send-req-btn" class="btn btn-primary" ng-click="GET()">Send new request</button>
-                <div id="get-response"><span>Your expression is:</span><span id="response-text">{{response.expressions}}</span></div>
-                <div id="post-response"><span>Your solution for server will be:</span><span id="calculate-text">{{result.results}}</span></div>
+                <div id="get-response"><span>Your expression is: </span><span id="response-text">{{response.expressions}}</span></div>
+                <div id="post-response"><span>Your solution for server will be: </span><span id="calculate-text">{{result.results}}</span></div>
                 <button type="button" id="send-sol-btn" class="btn btn-primary" ng-click="POST()">Send solution</button>
                 <div class="allerts" ng-show="show">
                     <div class="alert alert-danger" role="alert" ng-hide="serverResult">
