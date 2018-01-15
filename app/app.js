@@ -29,7 +29,7 @@ class MathSolver {
                         resultStack.push(parseInt(b) % parseInt(a));
                     }
                 } else if(postfix[i] === "/") {
-                    if((parseInt(b) / parseInt(a)) === (0 || Infinity) || parseInt(a) === 0) {
+                    if((parseInt(b) / parseInt(a)) ===  Infinity || parseInt(a) === 0) {
                         resultStack.push(42);
                     }
                     else {
